@@ -14,5 +14,5 @@ model=model_from_json(load_model_json)
 print('loaded model from disk')
 
 prediction = model.predict(x)
-for i in range(10,15):
+for i in range(5,20):
     print('%s=>%d(expected %d)' %(x[i].tolist(),prediction[i],y[i]))
