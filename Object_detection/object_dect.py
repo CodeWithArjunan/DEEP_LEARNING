@@ -46,6 +46,8 @@ while True:
             lable = "{}:{:.2f}%".format(CLASSES[idx],confidance*100)
 
             cv2.rectangle(img,(startX,startY),(endX,endY),colors[idx],2)
+
+#option
 '''
             if start€y-15 > 15:
                 startY-15
@@ -61,6 +63,3 @@ while True:
     if key == ord('q'):
         break
 cam.release()
-
-
-        
