@@ -6,7 +6,7 @@ from keras.preprocessing import image
 import json
 
 
-print('load json')
+#print('load json')
 json_file = open('model.json','r')
 load=json_file.read()
 json_file.close()
@@ -16,7 +16,6 @@ print('loaded to dusk')
 
 def classify(img_file):
     img_name=img_file
-#    test_img=image.load_img(img_name,target_size=(64,64))
     test_img = image.load_img(img_name, target_size = (64, 64))
 
     test_image = image.img_to_array(test_img)
