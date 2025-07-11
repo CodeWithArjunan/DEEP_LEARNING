@@ -1,4 +1,3 @@
-
 try:
     from PIL import Image
 except ImportError:
@@ -14,7 +13,6 @@ def recText(filename):
 
 info = recText('TEST3.jpg')
 print(info)
-
 
 
 file = open("New.txt","a")
