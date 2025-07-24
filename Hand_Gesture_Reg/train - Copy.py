@@ -7,6 +7,7 @@ from keras.layers import Flatten
 from tensorflow.keras.preprocessing.image import ImageDataGenerator
 from keras.callbacks import EarlyStopping, ModelCheckpoint
 
+#Model Network layer
 model = Sequential()
 model.add(Conv2D(32,(3,3),input_shape=(255,256,1),activation='relu'))
 model.add(MaxPooling2D(pool_size=(2,2)))
