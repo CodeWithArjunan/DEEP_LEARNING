@@ -10,6 +10,7 @@ model = model_from_json(loaded_model_json,custom_objects={"Sequential":Sequentia
 model.load_weights("model.weights.h5")
 print("Loaded model from disk")
 
+#function for classification 
 def classify(img_file):
     img_name = img_file
     test_image = image.load_img(img_name, target_size = (255, 256),grayscale=True)
