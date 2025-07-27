@@ -26,8 +26,8 @@ cam = cv2.Videocapture(0)
 detector = dlib.get_frontal_face_detector()
 predictor = dlib.shape_predictor(shapePredictor)
 
-(lstart,Lend) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
-(Rstart,Rend) = face.utils.FACIAL_LANDMARKS_IDXS["right_eye"]
+(Lstart,Lend) = face_utils.FACIAL_LANDMARKS_IDXS["left_eye"]
+(Rstart,Rend) = face_utils.utils.FACIAL_LANDMARKS_IDXS["right_eye"]
 
 while True:
     _,frame = cam.read(0)
@@ -49,7 +49,7 @@ while True:
         ear = (leftEar + rightEar)/2.0
 
         leftEyeHull = cv2.convexHull(leftEye)
-        righttEyeHull = cv2.convexHull(rightEye)
+        rightEyeHull = cv2.convexHull(rightEye)
         cv2.drowContours(frame,[leftEyeHull],-1,(0,0,255),5)
         cv2.drowContours(frame,[rightEyeHull],-1,(0,0,255),5)
 
