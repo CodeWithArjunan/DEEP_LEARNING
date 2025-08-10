@@ -47,15 +47,6 @@ while True:
 
             cv2.rectangle(img,(startX,startY),(endX,endY),colors[idx],2)
 
-#option
-'''
-            if start€y-15 > 15:
-                startY-15
-            else:
-                startY+15
-'''
-            cv2.putText(img,lable,(startX,startY),cv2.FONT_HERSHEY_SIMPLEX,0.5,colors[idx],2)
-
 
 
     cv2.imshow("Frame",img)
