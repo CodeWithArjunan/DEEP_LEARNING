@@ -22,11 +22,11 @@ train_datagen = ImageDataGenerator(rescale=1./255,
 val_datagen = ImageDataGenerator(1./255)
 
 #'training....
-train_set = train_datagen.flow_from_directory('Dataset/train',
+train_set = train_datagen.flow_from_directory('D:/VS/DL/DEEP_LEARNING/img_classifier/Dataset/train',
                                               target_size=(64,64),
                                               batch_size=8,
                                               class_mode='binary')
-val_set = val_datagen.flow_from_directory('Dataset/val',
+val_set = val_datagen.flow_from_directory('D:/VS/DL/DEEP_LEARNING/img_classifier/Dataset/val',
                                               target_size=(64,64),
                                               batch_size=8,
                                               class_mode='binary')

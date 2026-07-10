@@ -3,11 +3,11 @@ from keras.models import model_from_json
 import numpy as np
 from keras.preprocessing import image
 
-json_file = open('model.json', 'r')
+json_file = open('D:/VS/DL/DEEP_LEARNING/img_classifier/model.json', 'r')
 loaded_model_json = json_file.read()
 json_file.close()
 model = model_from_json(loaded_model_json,custom_objects={"Sequential":Sequential})
-model.load_weights("model.weights.h5")
+model.load_weights("D:/VS/DL/DEEP_LEARNING/img_classifier/model.weights.h5")
 print("Loaded model from disk")
 
 def classify(img_file):
@@ -26,7 +26,7 @@ def classify(img_file):
 
 
 import os
-path = 'Dataset/test'
+path = 'D:/VS/DL/DEEP_LEARNING/img_classifier/Dataset/test'
 files = []
 # r=root, d=directories, f = files
 for r, d, f in os.walk(path):
